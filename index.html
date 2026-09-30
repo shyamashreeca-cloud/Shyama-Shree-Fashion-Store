@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shyama Shree | Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- =====================================================
+
+     HEADER
+
+===================================================== -->
+
+<header class="main-header">
+
+    <div class="header-container">
+
+        <div class="brand">
+
+            <div class="brand-icon">S</div>
+
+            <div>
+
+                <h1>Shyama Shree</h1>
+
+                <span>SHOP • STYLE • SMILE</span>
+
+            </div>
+
+        </div>
+
+        <div class="search-container">
+
+            <input
+
+                type="text"
+
+                id="searchInput"
+
+                placeholder="Search for products, brands and more..."
+
+                onkeyup="searchProducts()"
+
+            >
+
+            <button onclick="searchProducts()">🔍</button>
+
+        </div>
+
+        <div class="header-actions">
+
+            <button class="login-button">
+
+                Login
+
+            </button>
+
+            <button class="seller-button">
+
+                Become a Seller
+
+            </button>
+
+            <button
+
+                class="cart-button"
+
+                onclick="openCart()"
+
+            >
+
+                🛒 Cart
+
+                <span id="cartCount">0</span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- =====================================================
+
+     CATEGORY NAVIGATION
+
+===================================================== -->
+
+<nav class="category-nav">
+
+    <div class="category-container">
+
+        <a href="#">All Categories</a>
+
+        <a href="#">👗 Fashion</a>
+
+        <a href="#">💎 Jewellery</a>
+
+        <a href="#">👜 Bags</a>
+
+        <a href="#">👟 Footwear</a>
+
+        <a href="#">💄 Beauty</a>
+
+        <a href="#">🏠 Home</a>
+
+        <a href="#">📱 Electronics</a>
+
+        <a href="#">🔥 Top Offers</a>
+
+    </div>
+
+</nav>
+
+<!-- =====================================================
+
+     HERO SECTION
+
+===================================================== -->
+
+<section class="hero-section">
+
+    <div class="hero-content">
+
+        <span class="hero-small">
+
+            SHYAMA SHREE SPECIAL
+
+        </span>
+
+        <h2>
+
+            Fashion That<br>
+
+            <strong>Feels Like You.</strong>
+
+        </h2>
+
+        <p>
+
+            Discover beautiful fashion, jewellery,
+
+            bags and lifestyle products.
+
+        </p>
+
+        <button
+
+            class="hero-button"
+
+            onclick="scrollToProducts()"
+
+        >
+
+            Shop Now →
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+
+     SERVICE STRIP
+
+===================================================== -->
+
+<section class="service-strip">
+
+    <div class="service-item">
+
+        <span>🚚</span>
+
+        <div>
+
+            <strong>Free Delivery</strong>
+
+            <small>On selected orders</small>
+
+        </div>
+
+    </div>
+
+    <div class="service-item">
+
+        <span>🔒</span>
+
+        <div>
+
+            <strong>Secure Shopping</strong>
+
+            <small>Safe & secure checkout</small>
+
+        </div>
+
+    </div>
+
+    <div class="service-item">
+
+        <span>↩️</span>
+
+        <div>
+
+            <strong>Easy Returns</strong>
+
+            <small>Simple return process</small>
+
+        </div>
+
+    </div>
+
+    <div class="service-item">
+
+        <span>🎁</span>
+
+        <div>
+
+            <strong>Daily Offers</strong>
+
+            <small>Exciting deals everyday</small>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+
+     OFFER BANNER
+
+===================================================== -->
+
+<section class="offer-section">
+
+    <div class="offer-left">
+
+        <span>LIMITED TIME OFFER</span>
+
+        <h2>
+
+            Flat Up To <strong>70% OFF</strong>
+
+        </h2>
+
+        <p>
+
+            On selected fashion & jewellery
+
+        </p>
+
+    </div>
+
+    <div class="offer-right">
+
+        <div class="offer-circle">
+
+            70%
+
+            <small>OFF</small>
+
+        </div>
+
+        <button onclick="scrollToProducts()">
+
+            Shop Deals
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+
+     PRODUCTS
+
+===================================================== -->
+
+<section
+
+    class="products-section"
+
+    id="products"
+
+>
+
+    <div class="section-title">
+
+        <div>
+
+            <span>HANDPICKED FOR YOU</span>
+
+            <h2>Trending Products</h2>
+
+        </div>
+
+        <a href="#">View All →</a>
+
+    </div>
+
+    <div class="product-grid">
+
+        <!-- PRODUCT 1 -->
+
+        <article
+
+            class="product-card"
+
+            data-name="women floral dress"
+
+        >
+
+            <div class="product-image">
+
+                <span class="discount-badge">
+
+                    50% OFF
+
+                </span>
+
+                <button class="heart-button">
+
+                    ♡
+
+                </button>
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=85"
+
+                    alt="Women's Dress"
+
+                >
+
+            </div>
+
+            <div class="product-details">
+
+                <span class="product-category">
+
+                    WOMEN • FASHION
+
+                </span>
+
+                <h3>
+
+                    Elegant Floral Dress
+
+                </h3>
+
+                <div class="rating">
+
+                    ⭐ 4.6
+
+                    <span>(128)</span>
+
+                </div>
+
+                <div class="price-row">
+
+                    <strong>₹799</strong>
+
+                    <del>₹1,599</del>
+
+                    <span>50% OFF</span>
+
+                </div>
+
+                <p class="product-offer">
+
+                    🎁 Extra ₹100 OFF on prepaid orders
+
+                </p>
+
+                <div class="product-actions">
+
+                    <button
+
+                        class="add-cart"
+
+                        onclick="addToCart('Elegant Floral Dress',799)"
+
+                    >
+
+                        Add to Cart
+
+                    </button>
+
+                    <button
+
+                        class="buy-button"
+
+                        onclick="buyNow('Elegant Floral Dress',799)"
+
+                    >
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- PRODUCT 2 -->
+
+        <article
+
+            class="product-card"
+
+            data-name="designer saree"
+
+        >
+
+            <div class="product-image">
+
+                <span class="discount-badge">
+
+                    45% OFF
+
+                </span>
+
+                <button class="heart-button">
+
+                    ♡
+
+                </button>
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=85"
+
+                    alt="Designer Saree"
+
+                >
+
+            </div>
+
+            <div class="product-details">
+
+                <span class="product-category">
+
+                    WOMEN • ETHNIC
+
+                </span>
+
+                <h3>
+
+                    Designer Traditional Saree
+
+                </h3>
+
+                <div class="rating">
+
+                    ⭐ 4.7
+
+                    <span>(96)</span>
+
+                </div>
+
+                <div class="price-row">
+
+                    <strong>₹1,299</strong>
+
+                    <del>₹2,399</del>
+
+                    <span>45% OFF</span>
+
+                </div>
+
+                <p class="product-offer">
+
+                    🎁 ₹100 OFF on prepaid orders
+
+                </p>
+
+                <div class="product-actions">
+
+                    <button
+
+                        class="add-cart"
+
+                        onclick="addToCart('Designer Traditional Saree',1299)"
+
+                    >
+
+                        Add to Cart
+
+                    </button>
+
+                    <button
+
+                        class="buy-button"
+
+                        onclick="buyNow('Designer Traditional Saree',1299)"
+
+                    >
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- PRODUCT 3 -->
+
+        <article
+
+            class="product-card"
+
+            data-name="fashion necklace jewellery"
+
+        >
+
+            <div class="product-image">
+
+                <span class="discount-badge">
+
+                    40% OFF
+
+                </span>
+
+                <button class="heart-button">
+
+                    ♡
+
+                </button>
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=700&q=85"
+
+                    alt="Jewellery"
+
+                >
+
+            </div>
+
+            <div class="product-details">
+
+                <span class="product-category">
+
+                    JEWELLERY
+
+                </span>
+
+                <h3>
+
+                    Premium Fashion Necklace
+
+                </h3>
+
+                <div class="rating">
+
+                    ⭐ 4.5
+
+                    <span>(214)</span>
+
+                </div>
+
+                <div class="price-row">
+
+                    <strong>₹599</strong>
+
+                    <del>₹999</del>
+
+                    <span>40% OFF</span>
+
+                </div>
+
+                <p class="product-offer">
+
+                    💎 Buy 2 & get additional discount
+
+                </p>
+
+                <div class="product-actions">
+
+                    <button
+
+                        class="add-cart"
+
+                        onclick="addToCart('Premium Fashion Necklace',599)"
+
+                    >
+
+                        Add to Cart
+
+                    </button>
+
+                    <button
+
+                        class="buy-button"
+
+                        onclick="buyNow('Premium Fashion Necklace',599)"
+
+                    >
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- PRODUCT 4 -->
+
+        <article
+
+            class="product-card"
+
+            data-name="women handbag"
+
+        >
+
+            <div class="product-image">
+
+                <span class="discount-badge">
+
+                    35% OFF
+
+                </span>
+
+                <button class="heart-button">
+
+                    ♡
+
+                </button>
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=85"
+
+                    alt="Women's Handbag"
+
+                >
+
+            </div>
+
+            <div class="product-details">
+
+                <span class="product-category">
+
+                    BAGS
+
+                </span>
+
+                <h3>
+
+                    Premium Women's Handbag
+
+                </h3>
+
+                <div class="rating">
+
+                    ⭐ 4.4
+
+                    <span>(187)</span>
+
+                </div>
+
+                <div class="price-row">
+
+                    <strong>₹899</strong>
+
+                    <del>₹1,399</del>
+
+                    <span>35% OFF</span>
+
+                </div>
+
+                <p class="product-offer">
+
+                    👜 Special weekend offer
+
+                </p>
+
+                <div class="product-actions">
+
+                    <button
+
+                        class="add-cart"
+
+                        onclick="addToCart('Premium Womens Handbag',899)"
+
+                    >
+
+                        Add to Cart
+
+                    </button>
+
+                    <button
+
+                        class="buy-button"
+
+                        onclick="buyNow('Premium Womens Handbag',899)"
+
+                    >
+
+                        Buy Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+
+     FASHION COLLECTION
+
+===================================================== -->
+
+<section class="collection-section">
+
+    <div class="section-title">
+
+        <div>
+
+            <span>EXPLORE OUR COLLECTION</span>
+
+            <h2>Shop By Style</h2>
+
+        </div>
+
+    </div>
+
+    <div class="collection-grid">
+
+        <div class="collection-card large">
+
+            <img
+
+                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=85"
+
+                alt="Fashion Collection"
+
+            >
+
+            <div>
+
+                <span>NEW COLLECTION</span>
+
+                <h3>Women's Fashion</h3>
+
+                <button>Explore →</button>
+
+            </div>
+
+        </div>
+
+        <div class="collection-card">
+
+            <img
+
+                src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=700&q=85"
+
+                alt="Jewellery Collection"
+
+            >
+
+            <div>
+
+                <span>NEW ARRIVALS</span>
+
+                <h3>Jewellery</h3>
+
+                <button>Explore →</button>
+
+            </div>
+
+        </div>
+
+        <div class="collection-card">
+
+            <img
+
+                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=700&q=85"
+
+                alt="Bag Collection"
+
+            >
+
+            <div>
+
+                <span>TRENDING</span>
+
+                <h3>Bags & Accessories</h3>
+
+                <button>Explore →</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+
+     SELLERS
+
+===================================================== -->
+
+<section class="sellers-section">
+
+    <div class="section-title">
+
+        <div>
+
+            <span>MEET OUR SELLERS</span>
+
+            <h2>Top Sellers</h2>
+
+        </div>
+
+        <a href="#">View All →</a>
+
+    </div>
+
+    <div class="seller-grid">
+
+        <div class="seller-card">
+
+            <div class="seller-photo">
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=85"
+
+                    alt="Seller"
+
+                >
+
+            </div>
+
+            <h3>Shree Fashion Studio</h3>
+
+            <p>Women's Fashion</p>
+
+            <span>⭐ 4.8 Seller Rating</span>
+
+            <button>
+
+                Visit Store
+
+            </button>
+
+        </div>
+
+        <div class="seller-card">
+
+            <div class="seller-photo">
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=400&q=85"
+
+                    alt="Seller"
+
+                >
+
+            </div>
+
+            <h3>Elegant Jewellery</h3>
+
+            <p>Jewellery & Accessories</p>
+
+            <span>⭐ 4.7 Seller Rating</span>
+
+            <button>
+
+                Visit Store
+
+            </button>
+
+        </div>
+
+        <div class="seller-card">
+
+            <div class="seller-photo">
+
+                <img
+
+                    src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=85"
+
+                    alt="Seller"
+
+                >
+
+            </div>
+
+            <h3>Shree Lifestyle</h3>
+
+            <p>Bags & Lifestyle</p>
+
+            <span>⭐ 4.6 Seller Rating</span>
+
+            <button>
+
+                Visit Store
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+
+     WHY SHYAMA SHREE
+
+===================================================== -->
+
+<section class="why-section">
+
+    <div class="why-heading">
+
+        <span>WHY SHOP WITH US</span>
+
+        <h2>
+
+            Welcome to <strong>Shyama Shree</strong>
+
+        </h2>
+
+        <p>
+
+            We bring fashion, style and everyday essentials
+
+            together in one simple shopping experience.
+
+        </p>
+
+    </div>
+
+    <div class="why-grid">
+
+        <div>
+
+            <span>✨</span>
+
+            <h3>Curated Products</h3>
+
+            <p>Beautiful products selected for you.</p>
+
+        </div>
+
+        <div>
+
+            <span>🔐</span>
+
+            <h3>Secure Shopping</h3>
+
+            <p>Your shopping experience stays protected.</p>
+
+        </div>
+
+        <div>
+
+            <span>💝</span>
+
+            <h3>Great Offers</h3>
+
+            <p>Enjoy exciting deals and discounts.</p>
+
+        </div>
+
+        <div>
+
+            <span>📦</span>
+
+            <h3>Easy Ordering</h3>
+
+            <p>Simple cart and checkout experience.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+
+     CART DRAWER
+
+===================================================== -->
+
+<div
+
+    class="cart-overlay"
+
+    id="cartOverlay"
+
+    onclick="closeCart()"
+
+></div>
+
+<aside
+
+    class="cart-drawer"
+
+    id="cartDrawer"
+
+>
+
+    <div class="cart-header">
+
+        <h2>Your Cart</h2>
+
+        <button onclick="closeCart()">
+
+            ✕
+
+        </button>
+
+    </div>
+
+    <div
+
+        class="cart-items"
+
+        id="cartItems"
+
+    >
+
+        <div class="empty-cart">
+
+            <div>🛒</div>
+
+            <h3>Your cart is empty</h3>
+
+            <p>
+
+                Add something beautiful to your cart.
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="cart-footer">
+
+        <div class="cart-price">
+
+            <span>Subtotal</span>
+
+            <strong id="cartTotal">
+
+                ₹0
+
+            </strong>
+
+        </div>
+
+        <p>
+
+            🚚 Delivery charges calculated at checkout
+
+        </p>
+
+        <button
+
+            class="checkout-button"
+
+            onclick="checkout()"
+
+        >
+
+            Proceed to Checkout →
+
+        </button>
+
+    </div>
+
+</aside>
+
+<!-- =====================================================
+
+     FOOTER
+
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-brand">
+
+            <h2>Shyama Shree</h2>
+
+            <p>
+
+                Fashion, jewellery, bags and lifestyle —
+
+                all in one place.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>About</h3>
+
+            <a href="#">About Us</a>
+
+            <a href="#">Careers</a>
+
+            <a href="#">Become a Seller</a>
+
+            <a href="#">Our Story</a>
+
+        </div>
+
+        <div>
+
+            <h3>Customer Service</h3>
+
+            <a href="#">Contact Us</a>
+
+            <a href="#">Track Order</a>
+
+            <a href="#">Returns</a>
+
+            <a href="#">Help Center</a>
+
+        </div>
+
+        <div>
+
+            <h3>Policies</h3>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Refund Policy</a>
+
+            <a href="#">Shipping Policy</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 Shyama Shree. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
